@@ -135,7 +135,7 @@ body {
 
   /* Scroll Button */
   .scrollBTN {
-    @apply fixed right-0 bottom-0 invert bg-pink-400 mr-4 mb-4 cursor-pointer p-4 rounded-[50%] z-50;
+    @apply fixed right-0 bottom-0 invert bg-pink-400 mr-4 mb-4 cursor-pointer p-3 rounded-[50%] z-50;
   }
 
   /* Camp */

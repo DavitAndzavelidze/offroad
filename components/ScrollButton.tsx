@@ -38,13 +38,13 @@ const ScrollButton = () => {
       onClick={scrollToReference}
       initial={{ opacity: 0 }}
       animate={controls}
-      exit={{ opacity: 0 }} // Exit animation
+      exit={{ opacity: 0 }}
       style={{
         display: showButton ? "block" : "none",
       }}
       className="scrollBTN"
     >
-      <Image src="/upArrow.svg" width={30} height={30} alt="Up Arrow" />
+      <Image src="/upArrow.svg" width={24} height={24} alt="Up Arrow" />
     </motion.div>
   );
 };
