@@ -29,12 +29,14 @@ const GetApp = () => {
               title="App Store"
               icon="/apple.svg"
               variant="btn_white"
+              alt="appStore"
               full
             />
             <Button
               type="button"
               title="Play Store"
               icon="/android.svg"
+              alt="playStore"
               variant="btn_dark_green_outline"
               full
             />

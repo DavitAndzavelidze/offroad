@@ -17,9 +17,9 @@ const Footer = () => {
               <FooterColumn title={columns.title} key={columns.title}>
                 <ul className="regular-14 flex flex-col gap-4 text-gray-90">
                   {columns.links.map((link) => (
-                    <Link href="/" key={link}>
-                      {link}
-                    </Link>
+                    <li key={link}>
+                      <Link href="/">{link}</Link>
+                    </li>
                   ))}
                 </ul>
               </FooterColumn>
@@ -46,9 +46,11 @@ const Footer = () => {
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-gray-90">
                   {SOCIALS.links.map((link) => (
-                    <Link href="/" key={link}>
-                      <Image src={link} alt="logo" width={24} height={24} />
-                    </Link>
+                    <li key={link}>
+                      <Link href="/">
+                        <Image src={link} alt="logo" width={24} height={24} />
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </FooterColumn>
