@@ -40,8 +40,8 @@ const Guide = () => {
         className="flexCenter max-container relative w-full"
       >
         <Image
-          src="/jeep.jpg"
-          alt="boat"
+          src="/jeep.webp"
+          alt="jeep"
           width={1440}
           height={580}
           className="w-full h-[580px] object-cover object-center 2xl:rounded-5xl"

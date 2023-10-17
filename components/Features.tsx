@@ -20,7 +20,7 @@ const Features = () => {
           className="flex flex-1 lg:min-h-[900px]"
         >
           <Image
-            src="/phone.png"
+            src="/phone.webp"
             alt="phone"
             width={440}
             height={1000}

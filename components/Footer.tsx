@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
             {FOOTER_LINKS.map((columns) => (
               <FooterColumn title={columns.title} key={columns.title}>
-                <ul className="regular-14 flex flex-col gap-4 text-gray-30">
+                <ul className="regular-14 flex flex-col gap-4 text-gray-90">
                   {columns.links.map((link) => (
                     <Link href="/" key={link}>
                       {link}
@@ -44,7 +44,7 @@ const Footer = () => {
 
             <div className="flex flex-col gap-5">
               <FooterColumn title={SOCIALS.title}>
-                <ul className="regular-14 flex gap-4 text-gray-30">
+                <ul className="regular-14 flex gap-4 text-gray-90">
                   {SOCIALS.links.map((link) => (
                     <Link href="/" key={link}>
                       <Image src={link} alt="logo" width={24} height={24} />
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         <div className="border bg-gray-20" />
-        <p className="regular-14 w-full text-center text-gray-30">
+        <p className="regular-14 w-full text-center text-gray-90">
           2023 OffRoad | All rights reserved
         </p>
       </div>

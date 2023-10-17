@@ -14,7 +14,6 @@ export const navVariants = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 1,
     },
   },
 };
@@ -35,7 +34,6 @@ export const topToBottom = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 1,
     },
   },
 };
@@ -55,7 +53,6 @@ export const bottomToTop = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 1,
     },
   },
 };
@@ -76,7 +73,6 @@ export const rightToLeft = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 1,
     },
   },
 };
@@ -96,7 +92,6 @@ export const leftToRight = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 1,
     },
   },
 };

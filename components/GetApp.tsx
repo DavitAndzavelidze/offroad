@@ -42,7 +42,7 @@ const GetApp = () => {
         </div>
 
         <div className="flex flex-1 items-center justify-end">
-          <Image src="/phones.png" alt="phones" width={550} height={870} />
+          <Image src="/phones.webp" alt="phones" width={550} height={870} />
         </div>
       </div>
     </motion.section>
