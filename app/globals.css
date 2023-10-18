@@ -160,6 +160,10 @@ body {
   .navlink-Hover {
     @apply text-green-700 border-green-700;
   }
+
+  .mobile-menu {
+    @apply container mx-auto flex flex-col justify-center items-start h-full bg-slate-700 max-w-md left-0 p-4;
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

@@ -52,16 +52,17 @@ const Navbar = () => {
           variant="btn_dark_green"
         />
       </div>
-      <button onClick={toggleMobileMenu} className="lg:hidden block">
+      <div className="block lg:hidden">
         <Image
           src="menu.svg"
           alt="menu"
           width={32}
           height={32}
+          onClick={toggleMobileMenu}
           className="inline-block cursor-pointer lg:hidden"
         />
-      </button>
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
+        <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
+      </div>
     </motion.nav>
   );
 };

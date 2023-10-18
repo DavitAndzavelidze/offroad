@@ -35,6 +35,7 @@ module.exports = {
         "feature-bg": "url('/feature-bg.webp')",
         pattern: "url('/pattern.webp')",
         "pattern-2": "url('/pattern-bg.webp')",
+        "pattern-3": "url('/pattern-3.svg')",
       },
       screens: {
         xs: "400px",

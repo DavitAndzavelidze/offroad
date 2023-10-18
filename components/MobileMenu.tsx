@@ -19,9 +19,9 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "-100%", opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="fixed inset-0 bg-slate-500 z-20"
+          className="fixed inset-0 z-50"
         >
-          <div className="container mx-auto flex flex-col justify-center items-start h-full w-3/4 max-w-md left-0 bg-slate-500 p-4">
+          <div className="mobile-menu bg-pattern-3">
             <button
               className="text-2xl text-blue-500 p-4 absolute top-0 right-0"
               onClick={onClose}
