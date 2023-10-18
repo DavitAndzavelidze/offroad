@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
@@ -11,6 +11,27 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+  const menuRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+      document.addEventListener("click", handleOutsideClick);
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling
+      document.removeEventListener("click", handleOutsideClick);
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Make sure to enable scrolling when the menu unmounts
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [isOpen, onClose]);
   return (
     <AnimatePresence>
       {isOpen && (
@@ -21,7 +42,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className="fixed inset-0 z-50"
         >
-          <div className="mobile-menu bg-pattern-3">
+          <div ref={menuRef} className="mobile-menu bg-pattern-3">
             <button
               className="text-2xl text-blue-500 p-4 absolute top-0 right-0"
               onClick={onClose}
