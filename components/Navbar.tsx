@@ -5,8 +5,14 @@ import Link from "next/link";
 import Button from "./Button";
 import { motion } from "framer-motion";
 import { topToBottom } from "@/utils/motion";
+import MobileMenu from "./MobileMenu";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
   return (
     <motion.nav
       variants={topToBottom}
@@ -46,14 +52,16 @@ const Navbar = () => {
           variant="btn_dark_green"
         />
       </div>
-
-      <Image
-        src="menu.svg"
-        alt="menu"
-        width={32}
-        height={32}
-        className="inline-block cursor-pointer lg:hidden"
-      />
+      <button onClick={toggleMobileMenu} className="lg:hidden block">
+        <Image
+          src="menu.svg"
+          alt="menu"
+          width={32}
+          height={32}
+          className="inline-block cursor-pointer lg:hidden"
+        />
+      </button>
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
     </motion.nav>
   );
 };
